@@ -1,0 +1,34 @@
+ {{>navbar}}
+<main class="pages full-vh login">
+     <section class="row"></section>
+     <section class="row">
+       <div class="col s12">
+         <h2 class="center-align">Log In</h2> 
+       </div>
+     </section>
+  <div class="row">
+    <form action="/authenticate" method="post" class="col offset-s1 s10 offset-s1 offset-m3 m6 offset-m3 center-align">
+        <div  class="green-text row">
+            <div class='row'>
+              <div class='input-field col s12'>
+                <input class='validate' type="text" name='username' id='user' required />
+                <label for='email'>Username</label>
+              </div>
+            </div>
+            <div class='row'>
+              <div class='input-field col s12 '>
+                <input class='validate' type='password' name='password' id='password' required />
+                <label for='password'>Password</label>
+              </div>
+            </div>
+            <br/>
+            <center>
+              <div class='row'>
+                <button type='submit' name='btn_login' id='btn_login' class='btn-large waves-effect waves-light og-btn'>Login</button>
+              </div>
+            </center>
+        </div>
+    </form>
+  </div>
+</main>
+ {{>footer}}

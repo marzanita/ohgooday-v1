@@ -1,0 +1,236 @@
+/////////////////////// BASE //////////////////
+@mixin push--auto {
+    margin: { 
+        left: 0 auto;
+        right: 0 auto;
+    }
+}
+
+html {
+    font-size: 100%;
+
+    @media #{$small-and-down} {
+        font-size: 87.5%; //1 rem = 14px, 14/16 = 87.5%
+      }
+      @media #{$medium-and-down} {
+        font-size: 100%; //1rem = 16px, 16/16 = 100%
+
+        .section-1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+      }
+
+      @media #{$large-and-up} {
+        h1 {
+            font-size: 67.773px;
+            letter-spacing: 1px;
+        }
+        h2 {
+            font-size: 45.182px;
+            letter-spacing: 1px;
+        }
+        h3 {
+            font-size: 20.081px;
+            letter-spacing: 1px;
+        }
+        h4 {
+            font-size: 13.387px;
+            letter-spacing: 1px;
+        }
+        h5 {
+            font-size: 8.925px;
+            letter-spacing: 1px;
+        }
+        h6 {
+            font-size: 5.95px;
+            letter-spacing: 1px;
+        }
+      }
+      @media #{$extra-large-and-up} {
+        font-size: 125%; //1rem = 18, 18/16 = 125%
+      }
+
+      img {
+          max-width: 100%;
+      }
+
+      
+}
+
+#phone-field label {
+    left: 0 !important;
+}
+
+.og-btn {
+    border-radius: 30px;
+    background-color: #5bbe9c;
+    padding: 0 38px;
+    color: $gooday-color;
+
+}
+
+
+.btn:hover, .btn-large:hover, .btn-small:hover { 
+    background-color: $gooday-font-color;
+    color: $gooday-color;
+}
+////////////////////////////HOME/////////////////
+
+.logo {
+    width: 75%;
+}
+
+.full-vh {
+    min-height: 100vh;
+}
+
+.hero {
+    background-image: url(../img/hero.png);
+    position: relative;
+    width: 80vw;
+    height: 80vh;
+    left: 0vw;
+    top: 5vh;
+    z-index: 99;
+    background-size: cover;
+    background-position: center;
+}
+.section-1 {
+    margin-top: 100px;
+    // margin-bottom: 50px;
+}
+.section-2 {
+    font-family: $font-gooday-secondary;  
+}
+
+.section-3 {
+    margin-top: 100px;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    left: 0;
+    top: 65%;
+    margin-top: -135px;
+    color: white
+    // font-size: 150px;
+    
+  }
+  
+//   .h100 {
+//     height: 100%;
+//   }
+
+.mission {
+    font-family: $font-gooday-primary;
+}
+
+//// CONTACT///////////
+
+.contact {
+    margin-top: 50px;
+}
+
+form {
+    margin-top: 50px;
+}
+////////////MY PLANTS////////
+.my-plants {
+    margin-top: 100px;
+}
+
+.num-input {
+    height: 25px !important;
+    width: 50px !important;
+    text-align: center !important;
+    // margin: 2rem 2rem !important;
+}
+
+.water-table {
+    margin-top: 200px;
+}
+
+.shape {
+    position: absolute;
+}
+
+.plant {
+    height: 600px;
+    width: 600px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../img/23.png);
+    z-index: 3000;
+    top: 5vh;
+    right: -10vw;
+    transform: rotate(-60deg);
+
+    @media #{$medium-and-down} {
+        height: 500px;
+        width: 500px;
+        top: 10vh;
+      right: -25vw;
+    }
+
+    @media #{$small-and-down} {
+        height: 200px;
+        width: 200px;
+        top: 20vh;
+      right: -15vw;
+    }
+    
+}
+////////////REMINDER PAGE/////////////////
+
+.reminder {
+    margin-top: 50px;
+}
+
+/////////////////// 404 PAGE///////////////
+.not-found {
+    position: fixed;
+    top: 0;
+    left: 0;
+   transform-origin: 0 0;
+   line-height: 1.2;
+   color: $gooday-footer-color;
+}
+
+.four-page {
+    font-family: $font-gooday-secondary;
+    font-size: 43vw;
+    text-align: center;
+    color: $gooday-font-color;
+
+
+}
+
+/////////////////////LOGIN PAGE/////////////////////
+
+.login {
+    margin-top: 50px;
+}
+
+
+///////////////REVEALING FOOTER//////////////
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 0;
+}
+
+.pages {
+    z-index: 2;
+    position: relative;
+    background-color: $gooday-color;
+}

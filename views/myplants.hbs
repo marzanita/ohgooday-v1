@@ -1,0 +1,51 @@
+{{>navbar}}
+<main class="pages my-plants">
+    <section class="row">
+        <div class="col col s12 offset-m1 m5">
+            <h2 class="">From plant killer to plant guru just a few clicks away!</h2>
+            <p>Watering your plant is a no brainer, but how much and how often can be 
+               more tricky to tell. Luckily, we have a few ideas on watering for optimum plant health.
+            </p>
+        </div>
+    <div id="downloadBtn" class="col s12 offset-m1 m4 offset-m1" >
+        <a href="/addreminder" class="btn-large waves-effect waves-light og-btn plants-btn">Add Reminder</a>
+    </div>
+    <span class="shape plant"></span>
+    </section>
+    <section class="row water-table">
+        <div class="col s12">
+            <h2 class="center-align">Water Reminders</h2>
+        </div>
+    </section>
+    <section class="row">
+        <div class="col s12 offset-m2 m8 offset-m2">
+            <br>
+            {{#if plantName}} 
+            <table class="table table-bordered table-hover table-striped">
+                <thead>
+                    <tr>
+                        <th class="text-center">Plant Name</th>
+                        <th class="text-center">Next Notification</th>
+                        <th class="text-center">Menu</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each plantName}}
+                    <tr>
+                        <td class="text-center cellText">{{plantName}}</td>
+                        <td class="text-center cellText">{{textDate}}</td>
+                        <td class="text-center">
+                            <a href="/delete/{{id}}" id="confirmDelete">Delete</a>
+                        </td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+            {{else}}
+            <hr>
+            <p class="text-center">You don't have any reminders</p>
+            {{/if}}
+        </div>
+    </section>
+</main>
+{{>footer}}

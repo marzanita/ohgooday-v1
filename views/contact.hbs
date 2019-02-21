@@ -1,0 +1,52 @@
+{{>navbar}}
+<main class="pages full-vh contact">
+  <section class="row"></section>
+    <section class="row">
+      <div class="col s12">
+        <h2 class="center-align">Give us your thoughts.</h2> 
+      </div>
+    </section>
+<div class="row">
+  <form class="col s12 offset-m2 m8 offset-m2" id="contact-form" action="/contact" method="POST" novalidate>
+    <div class="row">
+      <div class="input-field col s6">
+        <input  id="first_name" type="text" name="first_name" class="validate">
+        <label for="first_name">First Name</label>
+      </div>
+      <div class="input-field col s6">
+        <input id="last_name" type="text" name="last_name" class="validate">
+        <label for="last_name">Last Name</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <input id="email" type="email" name="email" class="validate">
+        <label for="email">Email</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <input id="phone" type="text" name="phone" class="validate">
+        <label for="phone">Phone</label>
+        <span id="phone-area"><span id=""></span></span>
+      </div>
+    </div>
+        <div class="row">
+      <div class="input-field col s12">
+        <textarea id="message" name="message" class="materialize-textarea"></textarea>
+        <label for="message">Message</label>
+      </div>
+      </div>
+      <div class="row">
+        <div class="col s12 center-align">
+      <button class="btn-large waves-effect waves-light og-btn" id="submit-button" form="contact-form" type="submit" name="action">Submit</button>
+      </div>
+      <div class="col s12">
+        <span id="server-response"><span id="last-server-response"></span></span>
+      </div>
+      </div>
+  </form>
+</div>  
+</main>
+<script type="text/javascript" src="js/sendEmail.js"></script>
+{{>footer}}

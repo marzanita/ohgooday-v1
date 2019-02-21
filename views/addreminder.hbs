@@ -1,0 +1,39 @@
+{{>navbar}}
+<main class="pages reminder">
+    <div class="row add-plant full-vh">
+        <div class="col s12 offset-m1 m5 widget">
+            <h2>Yes, it's sad we have to send reminders to keep your plants alive.</h2>
+            <p>But, we are not judging. That's why we made this easy to use reminder app. Go ahead and 
+                fill it out already, your plants are waiting!
+            </p>
+        </div>
+        <form action="/addreminder" method="POST">
+        <div class="input-field col s12 offset-m1 m4 offset-m1 widget">
+            <select class="icons" name="plant">
+                <option value="" disabled selected>Select Plant</option>
+                <option value="Pothos" data-icon="img/pothos.png">Pothos</option>
+                <option value="Monstera" data-icon="img/monstera.png">Monstera</option>
+                <option value="Calathea" data-icon="img/calathea.png">Calathea</option>
+                <option value="Elephant" data-icon="img/elephant.png">Elephant Ear</option>
+            </select>
+            <br>
+            {{!-- <label>Add Type of Plant</label> --}}
+            Remind me every 
+            <div class="input-field inline">
+                 <input id="number-days" type="number" name="time" min="0" class="validate num-input">
+            </div>
+            days.
+            <br>
+
+            <div class="input-field inline">
+                <input id="icon_telephone" type="tel" name="phoneNumber" class="validate">
+                <label for="icon_telephone" id="phone-field">Phone Number</label>
+            </div>
+             <br>
+             <br>
+            <button class="btn-large waves-effect waves-light og-btn" type="submit" name="action">To the rescue</button>
+        </div>
+        </form>
+    </div>
+</main>
+{{>footer}}

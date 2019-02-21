@@ -1,0 +1,21 @@
+ <nav>
+    <div class="nav-wrapper .col.s12">
+      <a href="/" class="brand-logo center "><img src="img/ohgooday.png" alt"Oh Gooday Logo" class="logo responsive-img"></a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down button-collapse">
+        <li><a href="/myplants">My Plants</a></li>
+        <li><a href="/contact">Contact</a></li>
+        {{#if username}}
+        <li><a href="/logout">Logout</a></li>
+        {{/if}}
+      </ul>
+    </div>
+  </nav>
+
+  <ul class="sidenav headline" id="mobile-demo">
+      <li><a href="/myplants">My Plants</a></li>
+      <li><a href="/contact">Contact</a></li>
+      {{#if username}}
+      <li><a href="/logout">Logout</a></li>
+      {{/if}}
+  </ul>
